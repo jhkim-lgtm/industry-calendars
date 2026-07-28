@@ -24,6 +24,25 @@ COMMON_DARK = {
     '--chip-on-ink': '#141414',
 }
 
+def hex_rgba(h, a):
+    h = h.lstrip('#')
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    return f'rgba({r},{g},{b},{a})'
+
+def MONO_L(point):
+    """블랙앤화이트 라이트 팔레트 + 포인트 컬러 1색"""
+    return {'--bg':'#FBFBFA','--card':'#FFFFFF','--ink':'#141414','--sub':'#6B6B6B',
+            '--brand':'#141414','--brand-soft':'rgba(0,0,0,.04)',
+            '--acc':point,'--acc-soft':hex_rgba(point,'.09'),
+            '--c1':point,'--c2':point,'--c3':point,'--c4':point,'--c5':point}
+
+def MONO_D(point):
+    """블랙앤화이트 다크 팔레트 + 포인트 컬러 1색"""
+    return {'--bg':'#0E0E0E','--card':'#181818','--ink':'#F2F0EC','--sub':'#9C9C9C',
+            '--brand':'#F2F0EC','--brand-soft':'rgba(255,255,255,.05)',
+            '--acc':point,'--acc-soft':hex_rgba(point,'.13'),
+            '--c1':point,'--c2':point,'--c3':point,'--c4':point,'--c5':point}
+
 INDUSTRIES = {}
 
 # ────────────────────────── 뷰티 ──────────────────────────
@@ -37,12 +56,8 @@ INDUSTRIES['beauty'] = dict(
     h1_en='The Beauty Calendar', h1_ko='뷰티 마케터의 1년',
     lede='뷰티 업계 마케터가 반드시 알아야 할 박람회·어워즈·기프팅 시즌·레드카펫 모먼트를 한눈에. 이벤트마다 마케팅 앵글과 준비 타이밍을 함께 담았습니다.',
     footer_tag='Beauty Industry Intelligence',
-    light={'--bg':'#FAF4F2','--card':'#FFFFFF','--ink':'#221A1C','--sub':'#75625F',
-           '--brand':'#B4566B','--brand-soft':'rgba(180,86,107,.09)','--acc':'#B08D5E','--acc-soft':'rgba(176,141,94,.13)',
-           '--c1':'#7C64B0','--c2':'#B4566B','--c3':'#5E8C5A','--c4':'#C07A3C','--c5':'#B5453C'},
-    dark={'--bg':'#191214','--card':'#241A1D','--ink':'#F0E6E4','--sub':'#A99694',
-          '--brand':'#DE8BA0','--brand-soft':'rgba(222,139,160,.11)','--acc':'#CDB185','--acc-soft':'rgba(205,177,133,.13)',
-          '--c1':'#B49BE0','--c2':'#DE8BA0','--c3':'#93C08C','--c4':'#DE9159','--c5':'#E0776D'},
+    light=MONO_L('#C64E6E'),
+    dark=MONO_D('#E288A2'),
     playbook_title='뷰티 론칭 리듬',
     playbook_lede='뷰티 마케팅은 시즌 컬렉션과 기프팅 모멘텀의 반복입니다. 론칭 90일 전 기획이 완성돼 있어야 시딩과 리뷰 웨이브를 놓치지 않습니다.',
     playbook_cards=[
@@ -182,12 +197,8 @@ INDUSTRIES['fashion'] = dict(
     h1_en='The Fashion Calendar', h1_ko='패션 마케터의 1년',
     lede='4대 패션위크부터 어워즈·리테일 시즌까지, 패션 업계 마케터가 반드시 알아야 할 글로벌·국내 이벤트를 한눈에.',
     footer_tag='Fashion Industry Intelligence',
-    light={'--bg':'#F4F3F1','--card':'#FFFFFF','--ink':'#141414','--sub':'#6E6A64',
-           '--brand':'#1A1A1A','--brand-soft':'rgba(26,26,26,.05)','--acc':'#B02A37','--acc-soft':'rgba(176,42,55,.09)',
-           '--c1':'#B02A37','--c2':'#8A6FC0','--c3':'#5E8C5A','--c4':'#C07A3C','--c5':'#3E6FA8'},
-    dark={'--bg':'#121212','--card':'#1D1D1D','--ink':'#EFEDE9','--sub':'#A3A09A',
-          '--brand':'#F0EEE9','--brand-soft':'rgba(240,238,233,.06)','--acc':'#E06A76','--acc-soft':'rgba(224,106,118,.12)',
-          '--c1':'#E06A76','--c2':'#B49BE0','--c3':'#93C08C','--c4':'#DE9159','--c5':'#7FA9D6'},
+    light=MONO_L('#C8102E'),
+    dark=MONO_D('#F0506A'),
     playbook_title='시즌 마케팅 리듬',
     playbook_lede='패션은 6개월 앞을 사는 산업입니다. 컬렉션 발표 → 캠페인 → 드롭 → 세일의 사이클에 마케팅 캘린더를 정렬하세요.',
     playbook_cards=[
@@ -333,12 +344,8 @@ INDUSTRIES['jewelry'] = dict(
     h1_en='The High Jewelry Calendar', h1_ko='하이주얼리 마케터의 1년',
     lede='하이주얼리 하우스와 파인주얼리 브랜드가 알아야 할 페어·경매·쿠튀르 신작·기프팅 시즌·레드카펫 모먼트를 한눈에.',
     footer_tag='High Jewelry Intelligence',
-    light={'--bg':'#F3F5F1','--card':'#FFFFFF','--ink':'#161B18','--sub':'#66706A',
-           '--brand':'#1F5F4E','--brand-soft':'rgba(31,95,78,.07)','--acc':'#B49254','--acc-soft':'rgba(180,146,84,.12)',
-           '--c1':'#1F5F4E','--c2':'#B49254','--c3':'#B4566B','--c4':'#8A5FA8','--c5':'#3E6FA8'},
-    dark={'--bg':'#0F1512','--card':'#1A211D','--ink':'#E9EFE9','--sub':'#98A39C',
-          '--brand':'#6FC2A5','--brand-soft':'rgba(111,194,165,.1)','--acc':'#D4B87E','--acc-soft':'rgba(212,184,126,.13)',
-          '--c1':'#6FC2A5','--c2':'#D4B87E','--c3':'#DE8BA0','--c4':'#B49BE0','--c5':'#7FA9D6'},
+    light=MONO_L('#157A5C'),
+    dark=MONO_D('#5BC4A0'),
     playbook_title='하이주얼리 모먼트 운영법',
     playbook_lede='하이주얼리는 신작 발표(쿠튀르 위크)와 기프팅 시즌, 레드카펫이 화제성의 3축입니다. 각 모먼트를 역산해 캠페인을 정렬하세요.',
     playbook_cards=[
@@ -469,12 +476,8 @@ INDUSTRIES['watches'] = dict(
     h1_en='The Watch Calendar', h1_ko='시계 마케터의 1년',
     lede='워치스&원더스부터 GPHG·경매·스포츠 앰배서더 모먼트까지, 시계 업계 마케터가 알아야 할 1년을 한눈에.',
     footer_tag='Horology Intelligence',
-    light={'--bg':'#F2F4F6','--card':'#FFFFFF','--ink':'#151A21','--sub':'#66707C',
-           '--brand':'#2C4A73','--brand-soft':'rgba(44,74,115,.07)','--acc':'#A98F5E','--acc-soft':'rgba(169,143,94,.13)',
-           '--c1':'#2C4A73','--c2':'#A98F5E','--c3':'#8A5FA8','--c4':'#B05E2A','--c5':'#5E8C5A'},
-    dark={'--bg':'#0F1319','--card':'#1A2028','--ink':'#E9EDF2','--sub':'#98A2AE',
-          '--brand':'#8FB3E0','--brand-soft':'rgba(143,179,224,.1)','--acc':'#CDB185','--acc-soft':'rgba(205,177,133,.13)',
-          '--c1':'#8FB3E0','--c2':'#CDB185','--c3':'#B49BE0','--c4':'#DE9159','--c5':'#93C08C'},
+    light=MONO_L('#2C5AA0'),
+    dark=MONO_D('#7FA9E0'),
     playbook_title='노벨티 사이클 운영법',
     playbook_lede='시계 마케팅의 1년은 신작(노벨티) 발표 → 국내 입고 → 앰배서더 모먼트 → 연말 기프팅으로 흐릅니다. 4월 제네바가 모든 것의 시작점입니다.',
     playbook_cards=[
@@ -590,12 +593,8 @@ INDUSTRIES['wellness'] = dict(
     h1_en='The Wellness Calendar', h1_ko='웰니스 마케터의 1년',
     lede='웰니스·롱지비티 업계가 알아야 할 글로벌 서밋·시즌 모멘텀·러닝 캘린더·글로벌 데이를 한눈에. 이벤트마다 마케팅 앵글과 준비 타이밍을 담았습니다.',
     footer_tag='Wellness & Longevity Intelligence',
-    light={'--bg':'#F4F6F0','--card':'#FFFFFF','--ink':'#171B15','--sub':'#68705F',
-           '--brand':'#3E6B4F','--brand-soft':'rgba(62,107,79,.08)','--acc':'#B99B6B','--acc-soft':'rgba(185,155,107,.13)',
-           '--c1':'#3E6B4F','--c2':'#C07A3C','--c3':'#3E6FA8','--c4':'#8A5FA8','--c5':'#B5453C'},
-    dark={'--bg':'#111611','--card':'#1B221B','--ink':'#EAEFE8','--sub':'#9CA694',
-          '--brand':'#8FC49C','--brand-soft':'rgba(143,196,156,.1)','--acc':'#CDB185','--acc-soft':'rgba(205,177,133,.13)',
-          '--c1':'#8FC49C','--c2':'#DE9159','--c3':'#7FA9D6','--c4':'#B49BE0','--c5':'#E0776D'},
+    light=MONO_L('#4C8B5C'),
+    dark=MONO_D('#8FC49C'),
     playbook_title='웰니스 모멘텀 운영법',
     playbook_lede='웰니스 마케팅은 "결심의 순간"을 잡는 게임입니다. 새해·여름 전·마라톤 시즌 등 행동이 바뀌는 모멘텀에 캠페인을 정렬하세요.',
     playbook_cards=[

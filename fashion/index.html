@@ -11,19 +11,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#F4F3F1;
+    --bg:#FBFBFA;
     --card:#FFFFFF;
     --ink:#141414;
-    --sub:#6E6A64;
-    --brand:#1A1A1A;
-    --brand-soft:rgba(26,26,26,.05);
-    --acc:#B02A37;
-    --acc-soft:rgba(176,42,55,.09);
-    --c1:#B02A37;
-    --c2:#8A6FC0;
-    --c3:#5E8C5A;
-    --c4:#C07A3C;
-    --c5:#3E6FA8;
+    --sub:#6B6B6B;
+    --brand:#141414;
+    --brand-soft:rgba(0,0,0,.04);
+    --acc:#C8102E;
+    --acc-soft:rgba(200,16,46,.09);
+    --c1:#C8102E;
+    --c2:#C8102E;
+    --c3:#C8102E;
+    --c4:#C8102E;
+    --c5:#C8102E;
     --line:rgba(20,20,20,.14);
     --line-soft:rgba(20,20,20,.07);
     --live:#2F7D42;
@@ -33,19 +33,19 @@
   }
   @media (prefers-color-scheme: dark){
     :root{
-      --bg:#121212;
-      --card:#1D1D1D;
-      --ink:#EFEDE9;
-      --sub:#A3A09A;
-      --brand:#F0EEE9;
-      --brand-soft:rgba(240,238,233,.06);
-      --acc:#E06A76;
-      --acc-soft:rgba(224,106,118,.12);
-      --c1:#E06A76;
-      --c2:#B49BE0;
-      --c3:#93C08C;
-      --c4:#DE9159;
-      --c5:#7FA9D6;
+      --bg:#0E0E0E;
+      --card:#181818;
+      --ink:#F2F0EC;
+      --sub:#9C9C9C;
+      --brand:#F2F0EC;
+      --brand-soft:rgba(255,255,255,.05);
+      --acc:#F0506A;
+      --acc-soft:rgba(240,80,106,.13);
+      --c1:#F0506A;
+      --c2:#F0506A;
+      --c3:#F0506A;
+      --c4:#F0506A;
+      --c5:#F0506A;
       --line:rgba(238,235,230,.16);
       --line-soft:rgba(238,235,230,.07);
       --live:#7CC98F;
@@ -74,16 +74,16 @@
   h1 .en{display:block; font-weight:400; font-size:.42em; letter-spacing:.14em; color:var(--acc); text-transform:uppercase; margin-bottom:10px}
   .lede{margin:18px 0 0; max-width:640px; color:var(--sub); font-size:15px}
 
-  .now{margin:34px 0 0; border:1px solid var(--brand); background:var(--brand-soft); border-radius:2px; padding:22px 24px}
-  .now-tag{display:inline-flex; align-items:center; gap:8px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--brand); font-weight:700; margin-bottom:10px}
-  .now-tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--brand);animation:pulse 2s infinite}
+  .now{margin:34px 0 0; border:1px solid var(--acc); background:var(--acc-soft); border-radius:2px; padding:22px 24px}
+  .now-tag{display:inline-flex; align-items:center; gap:8px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--acc); font-weight:700; margin-bottom:10px}
+  .now-tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--acc);animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
   @media (prefers-reduced-motion: reduce){.now-tag .pulse{animation:none}}
   .now h2{margin:0 0 6px; font-size:clamp(19px,3vw,26px); font-weight:600; line-height:1.35}
   .now p{margin:0; color:var(--sub); font-size:14px; max-width:720px}
   .now ul{margin:14px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px}
   .now li{display:flex; gap:10px; align-items:baseline; font-size:14px}
-  .now li .d{flex:0 0 auto; font-size:12px; color:var(--brand); font-weight:700; min-width:52px}
+  .now li .d{flex:0 0 auto; font-size:12px; color:var(--acc); font-weight:700; min-width:52px}
 
   .radar{margin:26px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px}
   .radar-card{background:var(--card); border:1px solid var(--line-soft); border-radius:2px; padding:14px 16px; box-shadow:var(--shadow); border-top:2px solid var(--cat,var(--acc))}
@@ -101,7 +101,7 @@
 
   .month{padding:44px 0 8px}
   .month-head{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:22px}
-  .month-num{font-size:clamp(38px,5.6vw,54px); line-height:1; font-weight:400; color:var(--brand)}
+  .month-num{font-size:clamp(38px,5.6vw,54px); line-height:1; font-weight:400; color:var(--acc)}
   .month-meta .y{font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--sub)}
   .month-meta .theme{font-size:15px; font-weight:700; margin-top:2px}
   .month-meta .theme .super{color:var(--acc)}
@@ -109,6 +109,7 @@
   @media (max-width:640px){.month-note{margin-left:0; text-align:left}}
 
   .events{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px}
+  .empty-month{grid-column:1/-1; border:1px dashed var(--line); border-radius:2px; padding:18px 20px; color:var(--sub); font-size:13px; letter-spacing:.02em}
   .ev{background:var(--card); border:1px solid var(--line-soft); border-left:3px solid var(--cat); border-radius:2px;
     padding:16px 18px 15px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:8px}
   .ev.past{opacity:.45}
@@ -375,7 +376,7 @@ function status(ev){
       document.querySelectorAll('.ev').forEach(el=>el.classList.toggle('hidden',key!=='all'&&el.dataset.cat!==key));
       document.querySelectorAll('.month').forEach(m=>{
         const any=[...m.querySelectorAll('.ev')].some(el=>!el.classList.contains('hidden'));
-        m.style.display=any?'':'none';
+        m.style.display=(key==='all'||any)?'':'none';
       });
     });
     f.appendChild(b);
@@ -392,7 +393,12 @@ function status(ev){
     (byMonth[key]=byMonth[key]||[]).push(ev);
   });
   const root=$('#months');
-  Object.keys(byMonth).sort().forEach(key=>{
+  /* 윈도우 안 모든 달을 빠짐없이 렌더링 (이벤트 없는 달 포함) */
+  const allKeys=[];
+  for(let d=new Date(winStart); d<=winEnd; d=new Date(d.getFullYear(), d.getMonth()+1, 1)){
+    allKeys.push(`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`);
+  }
+  allKeys.forEach(key=>{
     const [y,m]=key.split('-').map(Number);
     const meta=(typeof MONTH_THEMES!=='undefined'&&MONTH_THEMES[key])||{theme:''};
     const sec=document.createElement('section'); sec.className='month';
@@ -406,7 +412,11 @@ function status(ev){
       </div>
       <div class="events"></div>`;
     const grid=sec.querySelector('.events');
-    byMonth[key].sort((a,b)=>parse(a.s)-parse(b.s)).forEach(ev=>{
+    const evs=byMonth[key]||[];
+    if(evs.length===0){
+      grid.innerHTML='<div class="empty-month">이 달은 예정된 대형 이벤트가 없습니다 — 다음 시즌을 준비하는 구간.</div>';
+    }
+    evs.sort((a,b)=>parse(a.s)-parse(b.s)).forEach(ev=>{
       const st=status(ev);
       const card=document.createElement('article');
       card.className='ev'+(st.k==='past'?' past':'');
