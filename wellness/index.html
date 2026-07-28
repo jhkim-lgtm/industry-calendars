@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="웰니스·롱지비티 업계가 알아야 할 서밋·시즌 모멘텀·글로벌 데이 캘린더">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<title>WELLNESS & LONGEVITY CALENDAR — 1%CLUB 웰니스 인텔리전스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F4F6F0;
+    --card:#FFFFFF;
+    --ink:#171B15;
+    --sub:#68705F;
+    --brand:#3E6B4F;
+    --brand-soft:rgba(62,107,79,.08);
+    --acc:#B99B6B;
+    --acc-soft:rgba(185,155,107,.13);
+    --c1:#3E6B4F;
+    --c2:#C07A3C;
+    --c3:#3E6FA8;
+    --c4:#8A5FA8;
+    --c5:#B5453C;
+    --line:rgba(20,20,20,.14);
+    --line-soft:rgba(20,20,20,.07);
+    --live:#2F7D42;
+    --live-bg:rgba(47,125,66,.1);
+    --shadow:0 1px 2px rgba(20,20,20,.05),0 8px 28px rgba(20,20,20,.07);
+    --chip-on-ink:#FFFFFF;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111611;
+      --card:#1B221B;
+      --ink:#EAEFE8;
+      --sub:#9CA694;
+      --brand:#8FC49C;
+      --brand-soft:rgba(143,196,156,.1);
+      --acc:#CDB185;
+      --acc-soft:rgba(205,177,133,.13);
+      --c1:#8FC49C;
+      --c2:#DE9159;
+      --c3:#7FA9D6;
+      --c4:#B49BE0;
+      --c5:#E0776D;
+      --line:rgba(238,235,230,.16);
+      --line-soft:rgba(238,235,230,.07);
+      --live:#7CC98F;
+      --live-bg:rgba(124,201,143,.13);
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 32px rgba(0,0,0,.35);
+      --chip-on-ink:#141414;
+    }
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans KR","Apple SD Gothic Neo",-apple-system,BlinkMacSystemFont,"Malgun Gothic",sans-serif;
+    font-weight:400; font-size:15px; line-height:1.68; -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:"Fraunces","Noto Serif KR",Georgia,"Apple SD Gothic Neo",serif}
+  .mono{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums}
+
+  .wrap{max-width:1060px; margin:0 auto; padding:0 22px 90px}
+
+  header{padding:52px 0 30px; border-bottom:2px solid var(--brand)}
+  .eyebrow{display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap;
+    font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--sub); margin-bottom:16px}
+  .eyebrow b{color:var(--brand); font-weight:700}
+  h1{margin:0; font-weight:600; font-size:clamp(34px,6.4vw,60px); line-height:1.12; letter-spacing:-.005em; text-wrap:balance}
+  h1 .en{display:block; font-weight:400; font-size:.42em; letter-spacing:.14em; color:var(--acc); text-transform:uppercase; margin-bottom:10px}
+  .lede{margin:18px 0 0; max-width:640px; color:var(--sub); font-size:15px}
+
+  .now{margin:34px 0 0; border:1px solid var(--brand); background:var(--brand-soft); border-radius:2px; padding:22px 24px}
+  .now-tag{display:inline-flex; align-items:center; gap:8px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--brand); font-weight:700; margin-bottom:10px}
+  .now-tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--brand);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  @media (prefers-reduced-motion: reduce){.now-tag .pulse{animation:none}}
+  .now h2{margin:0 0 6px; font-size:clamp(19px,3vw,26px); font-weight:600; line-height:1.35}
+  .now p{margin:0; color:var(--sub); font-size:14px; max-width:720px}
+  .now ul{margin:14px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px}
+  .now li{display:flex; gap:10px; align-items:baseline; font-size:14px}
+  .now li .d{flex:0 0 auto; font-size:12px; color:var(--brand); font-weight:700; min-width:52px}
+
+  .radar{margin:26px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px}
+  .radar-card{background:var(--card); border:1px solid var(--line-soft); border-radius:2px; padding:14px 16px; box-shadow:var(--shadow); border-top:2px solid var(--cat,var(--acc))}
+  .radar-card .dd{font-size:11px; letter-spacing:.12em; font-weight:700; color:var(--cat,var(--acc)); text-transform:uppercase}
+  .radar-card .t{font-size:14.5px; font-weight:500; margin:3px 0 1px; line-height:1.4}
+  .radar-card .m{font-size:12.5px; color:var(--sub)}
+
+  .filters{position:sticky; top:0; z-index:5; background:var(--bg); padding:16px 0 14px; margin-top:40px;
+    border-bottom:1px solid var(--line-soft); display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+  .chip{border:1px solid var(--line); background:transparent; color:var(--sub); border-radius:999px;
+    padding:5px 14px 6px; font-size:12.5px; font-family:inherit; cursor:pointer; letter-spacing:.02em; transition:all .15s}
+  .chip .dot{display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--cc); margin-right:7px; vertical-align:1px}
+  .chip.on{background:var(--brand); border-color:var(--brand); color:var(--chip-on-ink)}
+  .chip:focus-visible{outline:2px solid var(--acc); outline-offset:2px}
+
+  .month{padding:44px 0 8px}
+  .month-head{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:22px}
+  .month-num{font-size:clamp(38px,5.6vw,54px); line-height:1; font-weight:400; color:var(--brand)}
+  .month-meta .y{font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--sub)}
+  .month-meta .theme{font-size:15px; font-weight:700; margin-top:2px}
+  .month-meta .theme .super{color:var(--acc)}
+  .month-note{margin-left:auto; font-size:12.5px; color:var(--sub); max-width:360px; text-align:right}
+  @media (max-width:640px){.month-note{margin-left:0; text-align:left}}
+
+  .events{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px}
+  .ev{background:var(--card); border:1px solid var(--line-soft); border-left:3px solid var(--cat); border-radius:2px;
+    padding:16px 18px 15px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:8px}
+  .ev.past{opacity:.45}
+  .ev.hidden{display:none}
+  .ev-top{display:flex; justify-content:space-between; align-items:center; gap:8px}
+  .ev-cat{font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--cat)}
+  .ev-dday{font-size:11px; font-weight:700; padding:2px 9px 3px; border-radius:999px; border:1px solid var(--line); color:var(--sub); white-space:nowrap}
+  .ev-dday.live{background:var(--live-bg); border-color:transparent; color:var(--live)}
+  .ev-dday.soon{background:var(--acc-soft); border-color:transparent; color:var(--acc)}
+  .ev h3{margin:0; font-size:17px; font-weight:500; line-height:1.4; letter-spacing:-.01em}
+  .ev .when{font-size:12.5px; color:var(--sub)}
+  .ev .when b{color:var(--ink); font-weight:500}
+  .ev .approx{font-size:10.5px; color:var(--sub); border:1px solid var(--line); border-radius:3px; padding:0 5px; margin-left:6px; letter-spacing:.05em}
+  .ev .angles{border-top:1px dashed var(--line); margin-top:4px; padding-top:9px; display:flex; flex-direction:column; gap:6px}
+  .ev .angle{font-size:12.8px; color:var(--sub); line-height:1.6}
+  .ev .angle b{font-weight:700; color:var(--brand); font-size:11px; letter-spacing:.1em; margin-right:5px}
+  .ev .angle.prep b{color:var(--acc)}
+
+  .playbook{margin-top:70px; border-top:2px solid var(--brand); padding-top:34px}
+  .pb-eyebrow{font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--acc); font-weight:700}
+  .playbook h2{margin:8px 0 6px; font-weight:600; font-size:clamp(24px,3.6vw,34px); line-height:1.2}
+  .playbook > p{color:var(--sub); max-width:660px; margin:0 0 26px; font-size:14.5px}
+  .pb-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+  .pb{background:var(--card); border:1px solid var(--line-soft); border-top:2px solid var(--acc); border-radius:2px; padding:18px; box-shadow:var(--shadow)}
+  .pb .d{font-size:13px; color:var(--brand); font-weight:700; letter-spacing:.08em}
+  .pb .t{font-weight:700; font-size:14.5px; margin:6px 0 4px}
+  .pb p{margin:0; font-size:13px; color:var(--sub); line-height:1.6}
+
+  footer{margin-top:60px; padding-top:18px; border-top:1px solid var(--line-soft); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--sub); letter-spacing:.06em}
+  footer .brand{color:var(--brand); font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">
+      <span><b>1%CLUB</b>&nbsp; WELLNESS & LONGEVITY INTELLIGENCE</span>
+      <span id="today-label" class="mono"></span>
+    </div>
+    <h1 class="serif"><span class="en">The Wellness Calendar</span>웰니스 마케터의 1년</h1>
+    <p class="lede">웰니스·롱지비티 업계가 알아야 할 글로벌 서밋·시즌 모멘텀·러닝 캘린더·글로벌 데이를 한눈에. 이벤트마다 마케팅 앵글과 준비 타이밍을 담았습니다.</p>
+
+    <div class="now">
+      <div class="now-tag"><span class="pulse"></span>이번 주 시의성 브리핑</div>
+      <h2 class="serif" id="now-title"></h2>
+      <p id="now-sub"></p>
+      <ul id="now-list"></ul>
+    </div>
+
+    <div class="radar" id="radar"></div>
+  </header>
+
+  <nav class="filters" id="filters" aria-label="카테고리 필터"></nav>
+
+  <main id="months"></main>
+
+  <section class="playbook">
+    <div class="pb-eyebrow">Operating Rhythm</div>
+    <h2 class="serif">웰니스 모멘텀 운영법</h2>
+    <p>웰니스 마케팅은 "결심의 순간"을 잡는 게임입니다. 새해·여름 전·마라톤 시즌 등 행동이 바뀌는 모멘텀에 캠페인을 정렬하세요.</p>
+    <div class="pb-grid">
+      <div class="pb"><div class="d">1월</div><div class="t">신년 리셋</div><p>연중 최대 모멘텀 — 새해 결심(운동·디톡스·수면) 수요 폭발. 캠페인은 12월 중순 론칭.</p></div>
+      <div class="pb"><div class="d">D-90</div><div class="t">바디 시즌 역산</div><p>여름 바디·바캉스 준비는 3월부터 — "여름까지 90일" 프레임이 검증된 포맷.</p></div>
+      <div class="pb"><div class="d">러닝</div><div class="t">마라톤 캘린더</div><p>3월 서울마라톤·11월 JTBC마라톤 전후로 러닝 기어·리커버리 수요 피크.</p></div>
+      <div class="pb"><div class="d">글로벌 데이</div><div class="t">캠페인 훅</div><p>수면의 날·요가의 날·정신건강의 날 — 브랜드 메시지를 걸 수 있는 공인된 훅.</p></div>
+      <div class="pb"><div class="d">서밋</div><div class="t">트렌드 선점</div><p>글로벌 웰니스 서밋 리포트가 이듬해 업계 키워드를 결정 — 발표 즉시 해설 콘텐츠 선점.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Prepared by <span class="brand">1%CLUB</span> — Wellness & Longevity Intelligence</span>
+    <span>날짜는 각 주최측 공식 발표 기준 · <span class="mono">±</span> 표기는 예상 시기(공식 미발표) · 기준일 <span class="mono" id="foot-date"></span></span>
+  </footer>
+</div>
+
+<script>
+const CATS = {
+  summit:{label:'서밋·컨퍼런스', color:'var(--c1)'},
+  seasonal:{label:'시즌 모멘텀', color:'var(--c2)'},
+  sport:{label:'러닝·스포츠', color:'var(--c3)'},
+  day:{label:'글로벌 데이', color:'var(--c4)'},
+  korea:{label:'코리아 모먼트', color:'var(--c5)'},
+};
+
+const EVENTS = [
+  {s:'2026-07-15', e:'2026-08-31', cat:'seasonal', title:'서머 리트릿 · 웰니스 트래블 성수기', place:'글로벌·한국',
+   angle:'휴가철 리트릿·스파·디지털 디톡스 수요 피크 — 휴가 후 번아웃 회복 콘텐츠까지 연결.',
+   prep:'9월 "리셋" 캠페인을 8월 중 준비.'},
+  {s:'2026-09-28', e:'2026-10-02', cat:'summit', title:'롱지비티 인베스터스 컨퍼런스', place:'스위스', approx:true,
+   angle:'롱지비티 산업 자본의 흐름을 읽는 자리 — 안티에이징을 넘어 "수명 연장 산업"의 시그널.',
+   prep:'—'},
+  {s:'2026-10-10', e:'2026-10-10', cat:'day', title:'세계 정신건강의 날', place:'글로벌',
+   angle:'멘탈 웰니스 캠페인 훅 — 명상·수면·스트레스 관리 메시지의 공인된 날.',
+   prep:'캠페인 2주 전 준비.'},
+  {s:'2026-11-01', e:'2026-11-01', cat:'sport', title:'JTBC 서울마라톤', place:'서울 (상암→올림픽공원)',
+   angle:'국내 최대 러닝 축제 — 러닝 크루 문화·기어·리커버리 수요 피크.',
+   prep:'러너 타깃 캠페인은 10월 초 시작 (훈련 막바지 구간).'},
+  {s:'2026-11-10', e:'2026-11-13', cat:'summit', title:'글로벌 웰니스 서밋 2026 (20주년)', place:'푸켓 앙사나 라구나',
+   angle:'세계 웰니스 산업의 다보스 — 여기서 발표되는 트렌드 리포트가 이듬해 업계 키워드를 결정.',
+   prep:'서밋 직후 "2027 웰니스 트렌드" 해설 콘텐츠 선점.'},
+  {s:'2026-11-19', e:'2026-11-19', cat:'korea', title:'수능 — 회복의 시작', place:'한국',
+   angle:'수험생·학부모의 번아웃 회복 시즌 — 수면·피부·체력 리셋 수요.',
+   prep:'—'},
+  {s:'2026-12-15', e:'2027-01-31', cat:'seasonal', title:'연말 디톡스 → 신년 리셋 시즌', place:'글로벌·한국',
+   angle:'웰니스 연중 최대 모멘텀 — 새해 결심(운동·다이어트·수면·금주) 수요 폭발. "1월의 헬스장" 현상.',
+   prep:'신년 캠페인은 12월 중순 론칭이 표준 — 1월 1일엔 이미 늦다.'},
+  {s:'2026-12-21', e:'2026-12-21', cat:'day', title:'세계 명상의 날 (UN)', place:'글로벌',
+   angle:'연말 마인드풀니스 캠페인 훅.',
+   prep:'—'},
+  {s:'2027-01-06', e:'2027-01-09', cat:'summit', title:'CES — 디지털 헬스·슬립테크', place:'라스베가스', approx:true,
+   angle:'웨어러블·슬립테크·AI 헬스 신제품의 무대 — 롱지비티 테크 트렌드의 최전선.',
+   prep:'—'},
+  {s:'2027-03-05', e:'2027-03-05', cat:'day', title:'세계 수면의 날', place:'글로벌', approx:true,
+   angle:'슬립 이코노미 캠페인 훅 — 수면 리추얼·침구·슬립테크 콘텐츠.',
+   prep:'—'},
+  {s:'2027-03-21', e:'2027-03-21', cat:'sport', title:'서울마라톤 (동아마라톤)', place:'서울 광화문→잠실',
+   angle:'국내 러닝 시즌의 공식 개막 — 봄 러닝 붐의 정점.',
+   prep:'러닝 캠페인 2월 시작.'},
+  {s:'2027-03-22', e:'2027-06-15', cat:'seasonal', title:'여름까지 90일 — 바디 시즌', place:'한국·글로벌',
+   angle:'바디프로필·다이어트·피트니스 수요가 여름을 향해 상승하는 구간.',
+   prep:'"D-90" 프레임 캠페인은 3월 말 론칭.'},
+  {s:'2027-04-03', e:'2027-04-18', cat:'korea', title:'벚꽃 러닝 · 아웃도어 시즌 개막', place:'한국', approx:true,
+   angle:'벚꽃 런·피크닉·아웃도어 요가 — 야외 활동 재개의 비주얼 모먼트.',
+   prep:'—'},
+  {s:'2027-06-12', e:'2027-06-12', cat:'day', title:'글로벌 웰니스 데이', place:'글로벌',
+   angle:'전 세계 웰니스 브랜드가 동시에 움직이는 날 — 무료 클래스·오픈 하우스 포맷.',
+   prep:'참여 프로그램 5월 중 기획.'},
+  {s:'2027-06-21', e:'2027-06-21', cat:'day', title:'국제 요가의 날', place:'글로벌',
+   angle:'요가·마인드풀니스 캠페인 훅 — 대규모 야외 클래스 시즌.',
+   prep:'—'},
+  {s:'2027-07-15', e:'2027-08-31', cat:'seasonal', title:'서머 리트릿 · 웰니스 트래블 성수기', place:'글로벌',
+   angle:'리트릿·스파 성수기.',
+   prep:'—'},
+  {s:'2027-09-27', e:'2027-10-01', cat:'summit', title:'롱지비티 인베스터스 컨퍼런스', place:'스위스', approx:true,
+   angle:'롱지비티 산업 시그널.',
+   prep:'—'},
+  {s:'2027-10-10', e:'2027-10-10', cat:'day', title:'세계 정신건강의 날', place:'글로벌',
+   angle:'멘탈 웰니스 캠페인 훅.',
+   prep:'—'},
+  {s:'2027-11-07', e:'2027-11-07', cat:'sport', title:'JTBC 서울마라톤 2027', place:'서울', approx:true,
+   angle:'가을 러닝 시즌 피날레.',
+   prep:'—'},
+  {s:'2027-11-09', e:'2027-11-12', cat:'summit', title:'글로벌 웰니스 서밋 2027', place:'미정', approx:true,
+   angle:'2028 웰니스 트렌드의 발원지.',
+   prep:'—'},
+  {s:'2027-12-15', e:'2027-12-31', cat:'seasonal', title:'연말 디톡스 → 신년 리셋 준비', place:'글로벌',
+   angle:'신년 모멘텀 준비 구간.',
+   prep:'12월 중순 신년 캠페인 론칭.'},
+];
+
+const MONTH_THEMES = {
+  '2026-07':{theme:'서머 리트릿 성수기', note:'여름 피크 + 9월 리셋 캠페인 준비.'},
+  '2026-08':{theme:'서머 피크 → 가을 리셋 준비'},
+  '2026-09':{theme:'가을 리셋 & 롱지비티 시그널'},
+  '2026-10':{theme:'러닝 시즌 & 멘탈 웰니스'},
+  '2026-11':{theme:'서울마라톤 & 글로벌 웰니스 서밋', super:true},
+  '2026-12':{theme:'디톡스 → 신년 리셋 론칭', super:true},
+  '2027-01':{theme:'신년 리셋 — 연중 최대 모멘텀', super:true},
+  '2027-02':{theme:'리셋 유지 & 러닝 준비'},
+  '2027-03':{theme:'서울마라톤 & 바디 시즌 개막', super:true},
+  '2027-04':{theme:'아웃도어 시즌'},
+  '2027-05':{theme:'바디 시즌 피크'},
+  '2027-06':{theme:'웰니스 데이 & 요가의 날'},
+  '2027-07':{theme:'서머 리트릿 성수기'},
+  '2027-08':{theme:'서머 피크'},
+  '2027-09':{theme:'가을 리셋'},
+  '2027-10':{theme:'러닝 시즌'},
+  '2027-11':{theme:'마라톤 & 웰니스 서밋', super:true},
+  '2027-12':{theme:'신년 리셋 준비', super:true},
+};
+
+const $=s=>document.querySelector(s);
+const fmt=(d)=>`${d.getMonth()+1}/${d.getDate()}`;
+const parse=s=>{const[a,b,c]=s.split('-').map(Number);return new Date(a,b-1,c);};
+const today=new Date(); today.setHours(0,0,0,0);
+const DAY=86400000;
+const MONTH_NAMES=['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+/* 롤링 윈도우: 이번 달 1일 ~ 내년 12월 31일 */
+const winStart=new Date(today.getFullYear(), today.getMonth(), 1);
+const winEnd=new Date(today.getFullYear()+1, 11, 31);
+const winStartKey=`${winStart.getFullYear()}-${String(winStart.getMonth()+1).padStart(2,'0')}`;
+const visible=EVENTS.filter(ev=>parse(ev.e)>=winStart && parse(ev.s)<=winEnd);
+
+const dateLabel=`${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}.${String(today.getDate()).padStart(2,'0')}`;
+$('#today-label').textContent = `${dateLabel} 기준`;
+$('#foot-date').textContent = dateLabel;
+
+function status(ev){
+  const s=parse(ev.s), e=parse(ev.e);
+  if(today>e) return {k:'past'};
+  if(today>=s) return {k:'live', label:'LIVE'};
+  const d=Math.round((s-today)/DAY);
+  return {k:d<=30?'soon':'future', label:`D-${d}`, d};
+}
+
+(function(){
+  const active=visible.map(ev=>({ev,st:status(ev)})).filter(x=>x.st.k==='live'||(x.st.k!=='past'&&x.st.d<=10));
+  const list=$('#now-list');
+  if(active.length===0){
+    $('#now-title').textContent='조용한 주간 — 준비의 시간';
+    $('#now-sub').textContent='이번 주 임박한 대형 이벤트는 없습니다. 아래 레이더의 다가오는 이벤트를 미리 준비하세요.';
+  }else{
+    const live=active.filter(x=>x.st.k==='live').length;
+    $('#now-title').textContent = live>0 ? '지금 진행 중인 모먼트' : '이번 주, 준비할 것들';
+    $('#now-sub').textContent='진행 중이거나 10일 안에 시작되는 이벤트입니다. 캠페인·콘텐츠·준비 체계를 점검하세요.';
+    active.sort((a,b)=>parse(a.ev.s)-parse(b.ev.s)).forEach(({ev,st})=>{
+      const li=document.createElement('li');
+      li.innerHTML=`<span class="d mono">${st.label}</span><span><b>${ev.title}</b> · ${fmt(parse(ev.s))}–${fmt(parse(ev.e))} ${ev.place}</span>`;
+      list.appendChild(li);
+    });
+  }
+})();
+
+(function(){
+  const up=visible.map(ev=>({ev,st:status(ev)})).filter(x=>x.st.k==='soon'||x.st.k==='future')
+    .sort((a,b)=>parse(a.ev.s)-parse(b.ev.s)).slice(0,4);
+  const radar=$('#radar');
+  up.forEach(({ev,st})=>{
+    const c=document.createElement('div'); c.className='radar-card';
+    c.style.setProperty('--cat',CATS[ev.cat].color);
+    c.innerHTML=`<div class="dd mono">${st.label} · ${CATS[ev.cat].label}</div>
+      <div class="t">${ev.title}</div>
+      <div class="m">${fmt(parse(ev.s))}–${fmt(parse(ev.e))} · ${ev.place}</div>`;
+    radar.appendChild(c);
+  });
+})();
+
+(function(){
+  const f=$('#filters');
+  const mk=(key,label,color)=>{
+    const b=document.createElement('button'); b.className='chip'+(key==='all'?' on':''); b.dataset.cat=key;
+    b.innerHTML=(color?`<span class="dot" style="--cc:${color}"></span>`:'')+label;
+    b.addEventListener('click',()=>{
+      f.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x.dataset.cat===key));
+      document.querySelectorAll('.ev').forEach(el=>el.classList.toggle('hidden',key!=='all'&&el.dataset.cat!==key));
+      document.querySelectorAll('.month').forEach(m=>{
+        const any=[...m.querySelectorAll('.ev')].some(el=>!el.classList.contains('hidden'));
+        m.style.display=any?'':'none';
+      });
+    });
+    f.appendChild(b);
+  };
+  mk('all','전체 보기',null);
+  Object.entries(CATS).forEach(([k,v])=>mk(k,v.label,v.color));
+})();
+
+(function(){
+  const byMonth={};
+  visible.forEach(ev=>{
+    let key=ev.s.slice(0,7);
+    if(key<winStartKey) key=winStartKey;
+    (byMonth[key]=byMonth[key]||[]).push(ev);
+  });
+  const root=$('#months');
+  Object.keys(byMonth).sort().forEach(key=>{
+    const [y,m]=key.split('-').map(Number);
+    const meta=(typeof MONTH_THEMES!=='undefined'&&MONTH_THEMES[key])||{theme:''};
+    const sec=document.createElement('section'); sec.className='month';
+    sec.innerHTML=`<div class="month-head">
+        <div class="month-num serif">${String(m).padStart(2,'0')}</div>
+        <div class="month-meta">
+          <div class="y mono">${MONTH_NAMES[m-1]} ${y}</div>
+          <div class="theme">${meta.super?'<span class="super">◆ </span>':''}${meta.theme||''}</div>
+        </div>
+        ${meta.note?`<div class="month-note">${meta.note}</div>`:''}
+      </div>
+      <div class="events"></div>`;
+    const grid=sec.querySelector('.events');
+    byMonth[key].sort((a,b)=>parse(a.s)-parse(b.s)).forEach(ev=>{
+      const st=status(ev);
+      const card=document.createElement('article');
+      card.className='ev'+(st.k==='past'?' past':'');
+      card.dataset.cat=ev.cat;
+      card.style.setProperty('--cat',CATS[ev.cat].color);
+      const dday= st.k==='past' ? `<span class="ev-dday">종료</span>`
+        : st.k==='live' ? `<span class="ev-dday live">● LIVE</span>`
+        : `<span class="ev-dday ${st.k==='soon'?'soon':''} mono">${st.label}</span>`;
+      const sd=parse(ev.s), ed=parse(ev.e);
+      const range = ev.s===ev.e ? fmt(sd) : `${fmt(sd)} – ${fmt(ed)}`;
+      card.innerHTML=`
+        <div class="ev-top"><span class="ev-cat">${CATS[ev.cat].label}</span>${dday}</div>
+        <h3>${ev.title}</h3>
+        <div class="when"><b class="mono">${range}</b> · ${ev.place}${ev.approx?'<span class="approx">± 예상 시기</span>':''}</div>
+        <div class="angles">
+          <div class="angle"><b>MARKETING</b>${ev.angle}</div>
+          ${ev.prep&&ev.prep!=='—'?`<div class="angle prep"><b>PREP</b>${ev.prep}</div>`:''}
+        </div>`;
+      grid.appendChild(card);
+    });
+    root.appendChild(sec);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="시계 업계 마케터가 알아야 할 페어·경매·어워즈·앰배서더 모먼트 캘린더">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌚</text></svg>">
+<title>WATCH CALENDAR — 1%CLUB 시계 인텔리전스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F2F4F6;
+    --card:#FFFFFF;
+    --ink:#151A21;
+    --sub:#66707C;
+    --brand:#2C4A73;
+    --brand-soft:rgba(44,74,115,.07);
+    --acc:#A98F5E;
+    --acc-soft:rgba(169,143,94,.13);
+    --c1:#2C4A73;
+    --c2:#A98F5E;
+    --c3:#8A5FA8;
+    --c4:#B05E2A;
+    --c5:#5E8C5A;
+    --line:rgba(20,20,20,.14);
+    --line-soft:rgba(20,20,20,.07);
+    --live:#2F7D42;
+    --live-bg:rgba(47,125,66,.1);
+    --shadow:0 1px 2px rgba(20,20,20,.05),0 8px 28px rgba(20,20,20,.07);
+    --chip-on-ink:#FFFFFF;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0F1319;
+      --card:#1A2028;
+      --ink:#E9EDF2;
+      --sub:#98A2AE;
+      --brand:#8FB3E0;
+      --brand-soft:rgba(143,179,224,.1);
+      --acc:#CDB185;
+      --acc-soft:rgba(205,177,133,.13);
+      --c1:#8FB3E0;
+      --c2:#CDB185;
+      --c3:#B49BE0;
+      --c4:#DE9159;
+      --c5:#93C08C;
+      --line:rgba(238,235,230,.16);
+      --line-soft:rgba(238,235,230,.07);
+      --live:#7CC98F;
+      --live-bg:rgba(124,201,143,.13);
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 32px rgba(0,0,0,.35);
+      --chip-on-ink:#141414;
+    }
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans KR","Apple SD Gothic Neo",-apple-system,BlinkMacSystemFont,"Malgun Gothic",sans-serif;
+    font-weight:400; font-size:15px; line-height:1.68; -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:"EB Garamond","Noto Serif KR",Georgia,"Apple SD Gothic Neo",serif}
+  .mono{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums}
+
+  .wrap{max-width:1060px; margin:0 auto; padding:0 22px 90px}
+
+  header{padding:52px 0 30px; border-bottom:2px solid var(--brand)}
+  .eyebrow{display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap;
+    font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--sub); margin-bottom:16px}
+  .eyebrow b{color:var(--brand); font-weight:700}
+  h1{margin:0; font-weight:600; font-size:clamp(34px,6.4vw,60px); line-height:1.12; letter-spacing:-.005em; text-wrap:balance}
+  h1 .en{display:block; font-weight:400; font-size:.42em; letter-spacing:.14em; color:var(--acc); text-transform:uppercase; margin-bottom:10px}
+  .lede{margin:18px 0 0; max-width:640px; color:var(--sub); font-size:15px}
+
+  .now{margin:34px 0 0; border:1px solid var(--brand); background:var(--brand-soft); border-radius:2px; padding:22px 24px}
+  .now-tag{display:inline-flex; align-items:center; gap:8px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--brand); font-weight:700; margin-bottom:10px}
+  .now-tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--brand);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  @media (prefers-reduced-motion: reduce){.now-tag .pulse{animation:none}}
+  .now h2{margin:0 0 6px; font-size:clamp(19px,3vw,26px); font-weight:600; line-height:1.35}
+  .now p{margin:0; color:var(--sub); font-size:14px; max-width:720px}
+  .now ul{margin:14px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px}
+  .now li{display:flex; gap:10px; align-items:baseline; font-size:14px}
+  .now li .d{flex:0 0 auto; font-size:12px; color:var(--brand); font-weight:700; min-width:52px}
+
+  .radar{margin:26px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px}
+  .radar-card{background:var(--card); border:1px solid var(--line-soft); border-radius:2px; padding:14px 16px; box-shadow:var(--shadow); border-top:2px solid var(--cat,var(--acc))}
+  .radar-card .dd{font-size:11px; letter-spacing:.12em; font-weight:700; color:var(--cat,var(--acc)); text-transform:uppercase}
+  .radar-card .t{font-size:14.5px; font-weight:500; margin:3px 0 1px; line-height:1.4}
+  .radar-card .m{font-size:12.5px; color:var(--sub)}
+
+  .filters{position:sticky; top:0; z-index:5; background:var(--bg); padding:16px 0 14px; margin-top:40px;
+    border-bottom:1px solid var(--line-soft); display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+  .chip{border:1px solid var(--line); background:transparent; color:var(--sub); border-radius:999px;
+    padding:5px 14px 6px; font-size:12.5px; font-family:inherit; cursor:pointer; letter-spacing:.02em; transition:all .15s}
+  .chip .dot{display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--cc); margin-right:7px; vertical-align:1px}
+  .chip.on{background:var(--brand); border-color:var(--brand); color:var(--chip-on-ink)}
+  .chip:focus-visible{outline:2px solid var(--acc); outline-offset:2px}
+
+  .month{padding:44px 0 8px}
+  .month-head{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:22px}
+  .month-num{font-size:clamp(38px,5.6vw,54px); line-height:1; font-weight:400; color:var(--brand)}
+  .month-meta .y{font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--sub)}
+  .month-meta .theme{font-size:15px; font-weight:700; margin-top:2px}
+  .month-meta .theme .super{color:var(--acc)}
+  .month-note{margin-left:auto; font-size:12.5px; color:var(--sub); max-width:360px; text-align:right}
+  @media (max-width:640px){.month-note{margin-left:0; text-align:left}}
+
+  .events{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px}
+  .ev{background:var(--card); border:1px solid var(--line-soft); border-left:3px solid var(--cat); border-radius:2px;
+    padding:16px 18px 15px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:8px}
+  .ev.past{opacity:.45}
+  .ev.hidden{display:none}
+  .ev-top{display:flex; justify-content:space-between; align-items:center; gap:8px}
+  .ev-cat{font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--cat)}
+  .ev-dday{font-size:11px; font-weight:700; padding:2px 9px 3px; border-radius:999px; border:1px solid var(--line); color:var(--sub); white-space:nowrap}
+  .ev-dday.live{background:var(--live-bg); border-color:transparent; color:var(--live)}
+  .ev-dday.soon{background:var(--acc-soft); border-color:transparent; color:var(--acc)}
+  .ev h3{margin:0; font-size:17px; font-weight:500; line-height:1.4; letter-spacing:-.01em}
+  .ev .when{font-size:12.5px; color:var(--sub)}
+  .ev .when b{color:var(--ink); font-weight:500}
+  .ev .approx{font-size:10.5px; color:var(--sub); border:1px solid var(--line); border-radius:3px; padding:0 5px; margin-left:6px; letter-spacing:.05em}
+  .ev .angles{border-top:1px dashed var(--line); margin-top:4px; padding-top:9px; display:flex; flex-direction:column; gap:6px}
+  .ev .angle{font-size:12.8px; color:var(--sub); line-height:1.6}
+  .ev .angle b{font-weight:700; color:var(--brand); font-size:11px; letter-spacing:.1em; margin-right:5px}
+  .ev .angle.prep b{color:var(--acc)}
+
+  .playbook{margin-top:70px; border-top:2px solid var(--brand); padding-top:34px}
+  .pb-eyebrow{font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--acc); font-weight:700}
+  .playbook h2{margin:8px 0 6px; font-weight:600; font-size:clamp(24px,3.6vw,34px); line-height:1.2}
+  .playbook > p{color:var(--sub); max-width:660px; margin:0 0 26px; font-size:14.5px}
+  .pb-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+  .pb{background:var(--card); border:1px solid var(--line-soft); border-top:2px solid var(--acc); border-radius:2px; padding:18px; box-shadow:var(--shadow)}
+  .pb .d{font-size:13px; color:var(--brand); font-weight:700; letter-spacing:.08em}
+  .pb .t{font-weight:700; font-size:14.5px; margin:6px 0 4px}
+  .pb p{margin:0; font-size:13px; color:var(--sub); line-height:1.6}
+
+  footer{margin-top:60px; padding-top:18px; border-top:1px solid var(--line-soft); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--sub); letter-spacing:.06em}
+  footer .brand{color:var(--brand); font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">
+      <span><b>1%CLUB</b>&nbsp; HOROLOGY INTELLIGENCE</span>
+      <span id="today-label" class="mono"></span>
+    </div>
+    <h1 class="serif"><span class="en">The Watch Calendar</span>시계 마케터의 1년</h1>
+    <p class="lede">워치스&원더스부터 GPHG·경매·스포츠 앰배서더 모먼트까지, 시계 업계 마케터가 알아야 할 1년을 한눈에.</p>
+
+    <div class="now">
+      <div class="now-tag"><span class="pulse"></span>이번 주 시의성 브리핑</div>
+      <h2 class="serif" id="now-title"></h2>
+      <p id="now-sub"></p>
+      <ul id="now-list"></ul>
+    </div>
+
+    <div class="radar" id="radar"></div>
+  </header>
+
+  <nav class="filters" id="filters" aria-label="카테고리 필터"></nav>
+
+  <main id="months"></main>
+
+  <section class="playbook">
+    <div class="pb-eyebrow">Operating Rhythm</div>
+    <h2 class="serif">노벨티 사이클 운영법</h2>
+    <p>시계 마케팅의 1년은 신작(노벨티) 발표 → 국내 입고 → 앰배서더 모먼트 → 연말 기프팅으로 흐릅니다. 4월 제네바가 모든 것의 시작점입니다.</p>
+    <div class="pb-grid">
+      <div class="pb"><div class="d">발표</div><div class="t">노벨티 시즌</div><p>4월 W&W 제네바 + 1월 LVMH 워치위크 — 신작 발표 즉시 하이라이트·가격 정리 콘텐츠 선점.</p></div>
+      <div class="pb"><div class="d">D+60</div><div class="t">국내 입고</div><p>신작 국내 입고·부티크 프리뷰 — 실물 콘텐츠와 웨이팅리스트 마케팅의 구간.</p></div>
+      <div class="pb"><div class="d">상시</div><div class="t">앰배서더 모먼트</div><p>F1·테니스·골프 등 스폰서 이벤트마다 손목 위 시계가 콘텐츠 — 스포츠 캘린더와 연동.</p></div>
+      <div class="pb"><div class="d">11월</div><div class="t">어워즈 & 경매</div><p>GPHG 수상과 제네바 경매 낙찰가 — 브랜드 가치의 공인 지표를 콘텐츠로 전환.</p></div>
+      <div class="pb"><div class="d">연말</div><div class="t">기프팅 시즌</div><p>홀리데이·춘절 기프팅 — 엔트리 럭셔리 라인의 판매 피크.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Prepared by <span class="brand">1%CLUB</span> — Horology Intelligence</span>
+    <span>날짜는 각 주최측 공식 발표 기준 · <span class="mono">±</span> 표기는 예상 시기(공식 미발표) · 기준일 <span class="mono" id="foot-date"></span></span>
+  </footer>
+</div>
+
+<script>
+const CATS = {
+  fair:{label:'페어·신작', color:'var(--c1)'},
+  award:{label:'어워즈', color:'var(--c2)'},
+  auction:{label:'경매', color:'var(--c3)'},
+  culture:{label:'스포츠·앰배서더', color:'var(--c4)'},
+  gift:{label:'기프팅·리테일', color:'var(--c5)'},
+};
+
+const EVENTS = [
+  {s:'2026-08-31', e:'2026-09-13', cat:'culture', title:'US 오픈 테니스 — 롤렉스 모먼트', place:'뉴욕',
+   angle:'롤렉스 공식 타임키퍼 — 코트 위 앰배서더 손목 콘텐츠.',
+   prep:'—'},
+  {s:'2026-09-02', e:'2026-09-06', cat:'fair', title:'제네바 워치 데이즈 (제7회)', place:'제네바',
+   angle:'하반기 신작 발표 무대 — 독립 브랜드·중견 메종의 노벨티 시즌.',
+   prep:'발표 즉시 신작 하이라이트 콘텐츠.'},
+  {s:'2026-09-24', e:'2026-09-26', cat:'gift', title:'추석 — 시계 기프팅', place:'한국',
+   angle:'명절 프리미엄 선물 수요 — 백화점 워치관 프로모션.',
+   prep:'—'},
+  {s:'2026-10-09', e:'2026-10-11', cat:'culture', title:'F1 싱가포르 GP', place:'마리나 베이',
+   angle:'롤렉스·태그호이어의 무대 — 패덕 손목 위 콘텐츠와 리미티드 에디션 뉴스.',
+   prep:'—'},
+  {s:'2026-11-02', e:'2026-11-15', cat:'auction', title:'제네바 가을 시계 경매 (필립스·크리스티·소더비)', place:'제네바', approx:true,
+   angle:'빈티지·그랜드 컴플리케이션 낙찰가가 곧 업계 헤드라인 — 시장 온도계.',
+   prep:'주요 랏 프리뷰 콘텐츠 사전 준비.'},
+  {s:'2026-11-07', e:'2026-11-07', cat:'award', title:'GPHG 시상식 (제26회)', place:'제네바 BFM',
+   angle:'시계업계의 오스카 — 수상작 정리 콘텐츠는 매년 검증된 포맷.',
+   prep:'수상 직후 카테고리별 결산 콘텐츠.'},
+  {s:'2026-12-01', e:'2026-12-25', cat:'gift', title:'홀리데이 기프팅 피크', place:'글로벌·한국',
+   angle:'엔트리 럭셔리 워치 판매 피크 — 기프트 가이드 시즌.',
+   prep:'가이드 콘텐츠 11월 중순 발행.'},
+  {s:'2027-01-18', e:'2027-01-21', cat:'fair', title:'LVMH 워치 위크 2027', place:'유럽', approx:true,
+   angle:'불가리·태그호이어·위블로·제니스 신년 노벨티 — 한 해 신작 레이스의 개막.',
+   prep:'—'},
+  {s:'2027-02-06', e:'2027-02-09', cat:'gift', title:'설 + 춘절 기프팅', place:'한국·중화권',
+   angle:'중화권 워치 소비 시즌 — 골드·레드 모티프 에디션.',
+   prep:'—'},
+  {s:'2027-04-05', e:'2027-04-11', cat:'fair', title:'Watches & Wonders Geneva 2027', place:'제네바',
+   angle:'시계업계 최대 행사 — 롤렉스·파텍·까르띠에 신작. 브라이틀링·갈렛·유니버설 제네브 신규 합류. 퍼블릭 데이 4/9–11.',
+   prep:'발표 주간 데일리 하이라이트 체제 + 신작 가격·스펙 정리 선점. 국내 입고 일정 즉시 확인.'},
+  {s:'2027-05-08', e:'2027-05-16', cat:'auction', title:'제네바 봄 시계 경매', place:'제네바', approx:true,
+   angle:'필립스 제네바 워치 옥션 — 상반기 시장 온도계.',
+   prep:'—'},
+  {s:'2027-05-27', e:'2027-05-30', cat:'culture', title:'F1 모나코 GP — 태그호이어의 무대', place:'몬테카를로', approx:true,
+   angle:'모터스포츠×워치 헤리티지의 정점.',
+   prep:'—'},
+  {s:'2027-06-28', e:'2027-07-11', cat:'culture', title:'윔블던 — 롤렉스 모먼트', place:'런던', approx:true,
+   angle:'센터코트 롤렉스 시계탑 — 테니스×워치 헤리티지 콘텐츠.',
+   prep:'—'},
+  {s:'2027-08-30', e:'2027-09-12', cat:'culture', title:'US 오픈 테니스', place:'뉴욕', approx:true,
+   angle:'롤렉스 타임키퍼 모먼트.',
+   prep:'—'},
+  {s:'2027-09-01', e:'2027-09-05', cat:'fair', title:'제네바 워치 데이즈 2027', place:'제네바', approx:true,
+   angle:'하반기 노벨티 시즌.',
+   prep:'—'},
+  {s:'2027-09-14', e:'2027-09-16', cat:'gift', title:'추석 기프팅', place:'한국',
+   angle:'명절 프리미엄 선물 수요.',
+   prep:'—'},
+  {s:'2027-10-08', e:'2027-10-10', cat:'culture', title:'F1 싱가포르 GP', place:'마리나 베이', approx:true,
+   angle:'아시아 모터스포츠×워치 위켄드.',
+   prep:'—'},
+  {s:'2027-11-01', e:'2027-11-14', cat:'auction', title:'제네바 가을 경매 + Only Watch 2027', place:'제네바', approx:true,
+   angle:'격년 자선 경매 Only Watch — 유니크 피스 낙찰가로 업계가 들썩이는 이벤트.',
+   prep:'—'},
+  {s:'2027-11-06', e:'2027-11-06', cat:'award', title:'GPHG 시상식 (제27회)', place:'제네바', approx:true,
+   angle:'시계업계 연간 결산.',
+   prep:'—'},
+  {s:'2027-12-01', e:'2027-12-25', cat:'gift', title:'홀리데이 기프팅 피크', place:'글로벌',
+   angle:'워치 기프트 가이드 시즌.',
+   prep:'—'},
+];
+
+const MONTH_THEMES = {
+  '2026-07':{theme:'하반기 준비', note:'9월 제네바 워치 데이즈·연말 기프팅 기획 시점.'},
+  '2026-08':{theme:'US 오픈 개막'},
+  '2026-09':{theme:'제네바 워치 데이즈 — 하반기 노벨티', super:true},
+  '2026-10':{theme:'F1 싱가포르 & 앰배서더 시즌'},
+  '2026-11':{theme:'GPHG & 경매 — 결산의 달', super:true},
+  '2026-12':{theme:'홀리데이 기프팅'},
+  '2027-01':{theme:'LVMH 워치위크 — 노벨티 개막', super:true},
+  '2027-02':{theme:'춘절 기프팅'},
+  '2027-03':{theme:'W&W D-30 — 프리뷰 시즌'},
+  '2027-04':{theme:'Watches & Wonders — 연중 최대', super:true},
+  '2027-05':{theme:'경매 & 모나코'},
+  '2027-06':{theme:'윔블던 개막'},
+  '2027-07':{theme:'윔블던 & 서머'},
+  '2027-08':{theme:'US 오픈'},
+  '2027-09':{theme:'제네바 워치 데이즈', super:true},
+  '2027-10':{theme:'F1 & 앰배서더 시즌'},
+  '2027-11':{theme:'GPHG & Only Watch — 결산', super:true},
+  '2027-12':{theme:'홀리데이 기프팅'},
+};
+
+const $=s=>document.querySelector(s);
+const fmt=(d)=>`${d.getMonth()+1}/${d.getDate()}`;
+const parse=s=>{const[a,b,c]=s.split('-').map(Number);return new Date(a,b-1,c);};
+const today=new Date(); today.setHours(0,0,0,0);
+const DAY=86400000;
+const MONTH_NAMES=['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+/* 롤링 윈도우: 이번 달 1일 ~ 내년 12월 31일 */
+const winStart=new Date(today.getFullYear(), today.getMonth(), 1);
+const winEnd=new Date(today.getFullYear()+1, 11, 31);
+const winStartKey=`${winStart.getFullYear()}-${String(winStart.getMonth()+1).padStart(2,'0')}`;
+const visible=EVENTS.filter(ev=>parse(ev.e)>=winStart && parse(ev.s)<=winEnd);
+
+const dateLabel=`${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}.${String(today.getDate()).padStart(2,'0')}`;
+$('#today-label').textContent = `${dateLabel} 기준`;
+$('#foot-date').textContent = dateLabel;
+
+function status(ev){
+  const s=parse(ev.s), e=parse(ev.e);
+  if(today>e) return {k:'past'};
+  if(today>=s) return {k:'live', label:'LIVE'};
+  const d=Math.round((s-today)/DAY);
+  return {k:d<=30?'soon':'future', label:`D-${d}`, d};
+}
+
+(function(){
+  const active=visible.map(ev=>({ev,st:status(ev)})).filter(x=>x.st.k==='live'||(x.st.k!=='past'&&x.st.d<=10));
+  const list=$('#now-list');
+  if(active.length===0){
+    $('#now-title').textContent='조용한 주간 — 준비의 시간';
+    $('#now-sub').textContent='이번 주 임박한 대형 이벤트는 없습니다. 아래 레이더의 다가오는 이벤트를 미리 준비하세요.';
+  }else{
+    const live=active.filter(x=>x.st.k==='live').length;
+    $('#now-title').textContent = live>0 ? '지금 진행 중인 모먼트' : '이번 주, 준비할 것들';
+    $('#now-sub').textContent='진행 중이거나 10일 안에 시작되는 이벤트입니다. 캠페인·콘텐츠·준비 체계를 점검하세요.';
+    active.sort((a,b)=>parse(a.ev.s)-parse(b.ev.s)).forEach(({ev,st})=>{
+      const li=document.createElement('li');
+      li.innerHTML=`<span class="d mono">${st.label}</span><span><b>${ev.title}</b> · ${fmt(parse(ev.s))}–${fmt(parse(ev.e))} ${ev.place}</span>`;
+      list.appendChild(li);
+    });
+  }
+})();
+
+(function(){
+  const up=visible.map(ev=>({ev,st:status(ev)})).filter(x=>x.st.k==='soon'||x.st.k==='future')
+    .sort((a,b)=>parse(a.ev.s)-parse(b.ev.s)).slice(0,4);
+  const radar=$('#radar');
+  up.forEach(({ev,st})=>{
+    const c=document.createElement('div'); c.className='radar-card';
+    c.style.setProperty('--cat',CATS[ev.cat].color);
+    c.innerHTML=`<div class="dd mono">${st.label} · ${CATS[ev.cat].label}</div>
+      <div class="t">${ev.title}</div>
+      <div class="m">${fmt(parse(ev.s))}–${fmt(parse(ev.e))} · ${ev.place}</div>`;
+    radar.appendChild(c);
+  });
+})();
+
+(function(){
+  const f=$('#filters');
+  const mk=(key,label,color)=>{
+    const b=document.createElement('button'); b.className='chip'+(key==='all'?' on':''); b.dataset.cat=key;
+    b.innerHTML=(color?`<span class="dot" style="--cc:${color}"></span>`:'')+label;
+    b.addEventListener('click',()=>{
+      f.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x.dataset.cat===key));
+      document.querySelectorAll('.ev').forEach(el=>el.classList.toggle('hidden',key!=='all'&&el.dataset.cat!==key));
+      document.querySelectorAll('.month').forEach(m=>{
+        const any=[...m.querySelectorAll('.ev')].some(el=>!el.classList.contains('hidden'));
+        m.style.display=any?'':'none';
+      });
+    });
+    f.appendChild(b);
+  };
+  mk('all','전체 보기',null);
+  Object.entries(CATS).forEach(([k,v])=>mk(k,v.label,v.color));
+})();
+
+(function(){
+  const byMonth={};
+  visible.forEach(ev=>{
+    let key=ev.s.slice(0,7);
+    if(key<winStartKey) key=winStartKey;
+    (byMonth[key]=byMonth[key]||[]).push(ev);
+  });
+  const root=$('#months');
+  Object.keys(byMonth).sort().forEach(key=>{
+    const [y,m]=key.split('-').map(Number);
+    const meta=(typeof MONTH_THEMES!=='undefined'&&MONTH_THEMES[key])||{theme:''};
+    const sec=document.createElement('section'); sec.className='month';
+    sec.innerHTML=`<div class="month-head">
+        <div class="month-num serif">${String(m).padStart(2,'0')}</div>
+        <div class="month-meta">
+          <div class="y mono">${MONTH_NAMES[m-1]} ${y}</div>
+          <div class="theme">${meta.super?'<span class="super">◆ </span>':''}${meta.theme||''}</div>
+        </div>
+        ${meta.note?`<div class="month-note">${meta.note}</div>`:''}
+      </div>
+      <div class="events"></div>`;
+    const grid=sec.querySelector('.events');
+    byMonth[key].sort((a,b)=>parse(a.s)-parse(b.s)).forEach(ev=>{
+      const st=status(ev);
+      const card=document.createElement('article');
+      card.className='ev'+(st.k==='past'?' past':'');
+      card.dataset.cat=ev.cat;
+      card.style.setProperty('--cat',CATS[ev.cat].color);
+      const dday= st.k==='past' ? `<span class="ev-dday">종료</span>`
+        : st.k==='live' ? `<span class="ev-dday live">● LIVE</span>`
+        : `<span class="ev-dday ${st.k==='soon'?'soon':''} mono">${st.label}</span>`;
+      const sd=parse(ev.s), ed=parse(ev.e);
+      const range = ev.s===ev.e ? fmt(sd) : `${fmt(sd)} – ${fmt(ed)}`;
+      card.innerHTML=`
+        <div class="ev-top"><span class="ev-cat">${CATS[ev.cat].label}</span>${dday}</div>
+        <h3>${ev.title}</h3>
+        <div class="when"><b class="mono">${range}</b> · ${ev.place}${ev.approx?'<span class="approx">± 예상 시기</span>':''}</div>
+        <div class="angles">
+          <div class="angle"><b>MARKETING</b>${ev.angle}</div>
+          ${ev.prep&&ev.prep!=='—'?`<div class="angle prep"><b>PREP</b>${ev.prep}</div>`:''}
+        </div>`;
+      grid.appendChild(card);
+    });
+    root.appendChild(sec);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="하이주얼리 업계 마케터가 알아야 할 페어·경매·기프팅·레드카펫 캘린더">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
+<title>HIGH JEWELRY CALENDAR — 1%CLUB 하이주얼리 인텔리전스</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&family=Cormorant:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F3F5F1;
+    --card:#FFFFFF;
+    --ink:#161B18;
+    --sub:#66706A;
+    --brand:#1F5F4E;
+    --brand-soft:rgba(31,95,78,.07);
+    --acc:#B49254;
+    --acc-soft:rgba(180,146,84,.12);
+    --c1:#1F5F4E;
+    --c2:#B49254;
+    --c3:#B4566B;
+    --c4:#8A5FA8;
+    --c5:#3E6FA8;
+    --line:rgba(20,20,20,.14);
+    --line-soft:rgba(20,20,20,.07);
+    --live:#2F7D42;
+    --live-bg:rgba(47,125,66,.1);
+    --shadow:0 1px 2px rgba(20,20,20,.05),0 8px 28px rgba(20,20,20,.07);
+    --chip-on-ink:#FFFFFF;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0F1512;
+      --card:#1A211D;
+      --ink:#E9EFE9;
+      --sub:#98A39C;
+      --brand:#6FC2A5;
+      --brand-soft:rgba(111,194,165,.1);
+      --acc:#D4B87E;
+      --acc-soft:rgba(212,184,126,.13);
+      --c1:#6FC2A5;
+      --c2:#D4B87E;
+      --c3:#DE8BA0;
+      --c4:#B49BE0;
+      --c5:#7FA9D6;
+      --line:rgba(238,235,230,.16);
+      --line-soft:rgba(238,235,230,.07);
+      --live:#7CC98F;
+      --live-bg:rgba(124,201,143,.13);
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 32px rgba(0,0,0,.35);
+      --chip-on-ink:#141414;
+    }
+  }
+
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Noto Sans KR","Apple SD Gothic Neo",-apple-system,BlinkMacSystemFont,"Malgun Gothic",sans-serif;
+    font-weight:400; font-size:15px; line-height:1.68; -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:"Cormorant","Noto Serif KR",Georgia,"Apple SD Gothic Neo",serif}
+  .mono{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace; font-variant-numeric:tabular-nums}
+
+  .wrap{max-width:1060px; margin:0 auto; padding:0 22px 90px}
+
+  header{padding:52px 0 30px; border-bottom:2px solid var(--brand)}
+  .eyebrow{display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap;
+    font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--sub); margin-bottom:16px}
+  .eyebrow b{color:var(--brand); font-weight:700}
+  h1{margin:0; font-weight:600; font-size:clamp(34px,6.4vw,60px); line-height:1.12; letter-spacing:-.005em; text-wrap:balance}
+  h1 .en{display:block; font-weight:400; font-size:.42em; letter-spacing:.14em; color:var(--acc); text-transform:uppercase; margin-bottom:10px}
+  .lede{margin:18px 0 0; max-width:640px; color:var(--sub); font-size:15px}
+
+  .now{margin:34px 0 0; border:1px solid var(--brand); background:var(--brand-soft); border-radius:2px; padding:22px 24px}
+  .now-tag{display:inline-flex; align-items:center; gap:8px; font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--brand); font-weight:700; margin-bottom:10px}
+  .now-tag .pulse{width:8px;height:8px;border-radius:50%;background:var(--brand);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
+  @media (prefers-reduced-motion: reduce){.now-tag .pulse{animation:none}}
+  .now h2{margin:0 0 6px; font-size:clamp(19px,3vw,26px); font-weight:600; line-height:1.35}
+  .now p{margin:0; color:var(--sub); font-size:14px; max-width:720px}
+  .now ul{margin:14px 0 0; padding:0; list-style:none; display:flex; flex-direction:column; gap:8px}
+  .now li{display:flex; gap:10px; align-items:baseline; font-size:14px}
+  .now li .d{flex:0 0 auto; font-size:12px; color:var(--brand); font-weight:700; min-width:52px}
+
+  .radar{margin:26px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:12px}
+  .radar-card{background:var(--card); border:1px solid var(--line-soft); border-radius:2px; padding:14px 16px; box-shadow:var(--shadow); border-top:2px solid var(--cat,var(--acc))}
+  .radar-card .dd{font-size:11px; letter-spacing:.12em; font-weight:700; color:var(--cat,var(--acc)); text-transform:uppercase}
+  .radar-card .t{font-size:14.5px; font-weight:500; margin:3px 0 1px; line-height:1.4}
+  .radar-card .m{font-size:12.5px; color:var(--sub)}
+
+  .filters{position:sticky; top:0; z-index:5; background:var(--bg); padding:16px 0 14px; margin-top:40px;
+    border-bottom:1px solid var(--line-soft); display:flex; gap:8px; flex-wrap:wrap; align-items:center}
+  .chip{border:1px solid var(--line); background:transparent; color:var(--sub); border-radius:999px;
+    padding:5px 14px 6px; font-size:12.5px; font-family:inherit; cursor:pointer; letter-spacing:.02em; transition:all .15s}
+  .chip .dot{display:inline-block; width:7px; height:7px; border-radius:50%; background:var(--cc); margin-right:7px; vertical-align:1px}
+  .chip.on{background:var(--brand); border-color:var(--brand); color:var(--chip-on-ink)}
+  .chip:focus-visible{outline:2px solid var(--acc); outline-offset:2px}
+
+  .month{padding:44px 0 8px}
+  .month-head{display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding-bottom:12px; margin-bottom:22px}
+  .month-num{font-size:clamp(38px,5.6vw,54px); line-height:1; font-weight:400; color:var(--brand)}
+  .month-meta .y{font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--sub)}
+  .month-meta .theme{font-size:15px; font-weight:700; margin-top:2px}
+  .month-meta .theme .super{color:var(--acc)}
+  .month-note{margin-left:auto; font-size:12.5px; color:var(--sub); max-width:360px; text-align:right}
+  @media (max-width:640px){.month-note{margin-left:0; text-align:left}}
+
+  .events{display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px}
+  .ev{background:var(--card); border:1px solid var(--line-soft); border-left:3px solid var(--cat); border-radius:2px;
+    padding:16px 18px 15px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:8px}
+  .ev.past{opacity:.45}
+  .ev.hidden{display:none}
+  .ev-top{display:flex; justify-content:space-between; align-items:center; gap:8px}
+  .ev-cat{font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--cat)}
+  .ev-dday{font-size:11px; font-weight:700; padding:2px 9px 3px; border-radius:999px; border:1px solid var(--line); color:var(--sub); white-space:nowrap}
+  .ev-dday.live{background:var(--live-bg); border-color:transparent; color:var(--live)}
+  .ev-dday.soon{background:var(--acc-soft); border-color:transparent; color:var(--acc)}
+  .ev h3{margin:0; font-size:17px; font-weight:500; line-height:1.4; letter-spacing:-.01em}
+  .ev .when{font-size:12.5px; color:var(--sub)}
+  .ev .when b{color:var(--ink); font-weight:500}
+  .ev .approx{font-size:10.5px; color:var(--sub); border:1px solid var(--line); border-radius:3px; padding:0 5px; margin-left:6px; letter-spacing:.05em}
+  .ev .angles{border-top:1px dashed var(--line); margin-top:4px; padding-top:9px; display:flex; flex-direction:column; gap:6px}
+  .ev .angle{font-size:12.8px; color:var(--sub); line-height:1.6}
+  .ev .angle b{font-weight:700; color:var(--brand); font-size:11px; letter-spacing:.1em; margin-right:5px}
+  .ev .angle.prep b{color:var(--acc)}
+
+  .playbook{margin-top:70px; border-top:2px solid var(--brand); padding-top:34px}
+  .pb-eyebrow{font-size:11px; letter-spacing:.24em; text-transform:uppercase; color:var(--acc); font-weight:700}
+  .playbook h2{margin:8px 0 6px; font-weight:600; font-size:clamp(24px,3.6vw,34px); line-height:1.2}
+  .playbook > p{color:var(--sub); max-width:660px; margin:0 0 26px; font-size:14.5px}
+  .pb-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px}
+  .pb{background:var(--card); border:1px solid var(--line-soft); border-top:2px solid var(--acc); border-radius:2px; padding:18px; box-shadow:var(--shadow)}
+  .pb .d{font-size:13px; color:var(--brand); font-weight:700; letter-spacing:.08em}
+  .pb .t{font-weight:700; font-size:14.5px; margin:6px 0 4px}
+  .pb p{margin:0; font-size:13px; color:var(--sub); line-height:1.6}
+
+  footer{margin-top:60px; padding-top:18px; border-top:1px solid var(--line-soft); display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--sub); letter-spacing:.06em}
+  footer .brand{color:var(--brand); font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">
+      <span><b>1%CLUB</b>&nbsp; HIGH JEWELRY INTELLIGENCE</span>
+      <span id="today-label" class="mono"></span>
+    </div>
+    <h1 class="serif"><span class="en">The High Jewelry Calendar</span>하이주얼리 마케터의 1년</h1>
+    <p class="lede">하이주얼리 하우스와 파인주얼리 브랜드가 알아야 할 페어·경매·쿠튀르 신작·기프팅 시즌·레드카펫 모먼트를 한눈에.</p>
+
+    <div class="now">
+      <div class="now-tag"><span class="pulse"></span>이번 주 시의성 브리핑</div>
+      <h2 class="serif" id="now-title"></h2>
+      <p id="now-sub"></p>
+      <ul id="now-list"></ul>
+    </div>
+
+    <div class="radar" id="radar"></div>
+  </header>
+
+  <nav class="filters" id="filters" aria-label="카테고리 필터"></nav>
+
+  <main id="months"></main>
+
+  <section class="playbook">
+    <div class="pb-eyebrow">Operating Rhythm</div>
+    <h2 class="serif">하이주얼리 모먼트 운영법</h2>
+    <p>하이주얼리는 신작 발표(쿠튀르 위크)와 기프팅 시즌, 레드카펫이 화제성의 3축입니다. 각 모먼트를 역산해 캠페인을 정렬하세요.</p>
+    <div class="pb-grid">
+      <div class="pb"><div class="d">신작</div><div class="t">쿠튀르 위크 공개</div><p>1월·7월 파리 쿠튀르 위크가 하이주얼리 컬렉션의 공식 발표 무대 — 프레스·VIP 프리뷰가 함께 움직인다.</p></div>
+      <div class="pb"><div class="d">D-45</div><div class="t">기프팅 캠페인</div><p>크리스마스·밸런타인·춘절 기프팅 캠페인은 45일 전 론칭 — 구매 리드타임이 긴 카테고리.</p></div>
+      <div class="pb"><div class="d">레드카펫</div><div class="t">착장 모먼트</div><p>시상식·영화제 착장은 실시간 화제성의 원천 — 착용 즉시 "누가 무엇을" 콘텐츠 대응.</p></div>
+      <div class="pb"><div class="d">경매</div><div class="t">시장 검증</div><p>제네바·홍콩 경매 결과는 브랜드 자산가치의 공인 지표 — 낙찰가 뉴스를 헤리티지 콘텐츠로 전환.</p></div>
+      <div class="pb"><div class="d">브라이덜</div><div class="t">웨딩 시즌</div><p>봄·가을 웨딩 시즌은 브라이덜 라인 매출 피크 — 상담 예약 캠페인 선행.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Prepared by <span class="brand">1%CLUB</span> — High Jewelry Intelligence</span>
+    <span>날짜는 각 주최측 공식 발표 기준 · <span class="mono">±</span> 표기는 예상 시기(공식 미발표) · 기준일 <span class="mono" id="foot-date"></span></span>
+  </footer>
+</div>
+
+<script>
+const CATS = {
+  fair:{label:'페어·전시', color:'var(--c1)'},
+  maison:{label:'메종·신작', color:'var(--c2)'},
+  gift:{label:'기프팅·브라이덜', color:'var(--c3)'},
+  redcarpet:{label:'레드카펫', color:'var(--c4)'},
+  auction:{label:'경매', color:'var(--c5)'},
+};
+
+const EVENTS = [
+  {s:'2026-09-14', e:'2026-09-20', cat:'fair', title:'Jewellery & Gem WORLD 홍콩 (JGW)', place:'홍콩 AWE·HKCEC',
+   angle:'세계 최대 주얼리 B2B 페어 — 원석·완제품 트렌드와 아시아 시장 분위기의 바로미터.',
+   prep:'바이어·서플라이어 미팅 8월 중 확정.'},
+  {s:'2026-09-24', e:'2026-09-26', cat:'gift', title:'추석 — 프리미엄 기프팅', place:'한국',
+   angle:'골드·파인주얼리 명절 선물 수요. 백화점 주얼리관 프로모션.',
+   prep:'—'},
+  {s:'2026-10-01', e:'2026-11-15', cat:'gift', title:'가을 웨딩 시즌 — 브라이덜 피크', place:'한국',
+   angle:'예물 상담·브라이덜 라인 매출 피크. 웨딩밴드·다이아 콘텐츠 시즌.',
+   prep:'상담 예약 캠페인은 8~9월 선행.'},
+  {s:'2026-10-05', e:'2026-10-12', cat:'auction', title:'소더비·크리스티 홍콩 가을 경매 (매그니피센트 주얼스)', place:'홍콩', approx:true,
+   angle:'아시아 주얼리 경매 시즌 — 낙찰가가 곧 시장 뉴스.',
+   prep:'—'},
+  {s:'2026-11-09', e:'2026-11-15', cat:'auction', title:'제네바 주얼리 경매 위크 (크리스티·소더비·필립스)', place:'제네바', approx:true,
+   angle:'세계 주얼리 경매의 정점 — 히스토릭 스톤 낙찰 뉴스가 글로벌 헤드라인.',
+   prep:'—'},
+  {s:'2026-11-27', e:'2026-11-27', cat:'redcarpet', title:'청룡영화상 — K-셀럽 주얼리', place:'서울', approx:true,
+   angle:'국내 최대 레드카펫 — 앰배서더 착장이 국내 화제성 피크.',
+   prep:'착장 협찬은 3~4주 전 확정.'},
+  {s:'2026-12-01', e:'2026-12-25', cat:'gift', title:'홀리데이 기프팅 피크', place:'글로벌·한국',
+   angle:'하이주얼리 연중 최대 기프팅 시즌 — 홀리데이 캠페인·윈도 디스플레이 대전.',
+   prep:'캠페인은 11월 중순 론칭 (D-45 원칙).'},
+  {s:'2027-01-25', e:'2027-01-28', cat:'maison', title:'파리 오트쿠튀르 위크 — 하이주얼리 신작 공개', place:'파리', approx:true,
+   angle:'까르띠에·반클리프·부쉐론 등 신작 컬렉션의 공식 발표 무대 — 연중 최대 신작 모먼트.',
+   prep:'신작 국내 입고·프레스 데이 일정을 발표 직후 확정.'},
+  {s:'2027-02-06', e:'2027-02-09', cat:'gift', title:'설 + 중국 춘절 기프팅', place:'한국·중화권',
+   angle:'춘절은 중화권 골드·주얼리 최대 소비 시즌.',
+   prep:'12월 말 캠페인 확정.'},
+  {s:'2027-02-14', e:'2027-02-14', cat:'gift', title:'밸런타인데이', place:'글로벌',
+   angle:'프러포즈·기프팅 모먼트 — 하트·러브 모티프 라인 피크.',
+   prep:'1월 초 캠페인 론칭 (D-45).'},
+  {s:'2027-03-11', e:'2027-03-18', cat:'fair', title:'TEFAF 마스트리흐트', place:'네덜란드', approx:true,
+   angle:'세계 최고 권위 아트·앤티크 페어 — 빈티지 하이주얼리 컬렉터의 무대.',
+   prep:'—'},
+  {s:'2027-03-14', e:'2027-03-14', cat:'redcarpet', title:'아카데미 시상식', place:'LA', approx:true,
+   angle:'하이주얼리 각축전 — "오스카 주얼리 결산" 콘텐츠는 매년 검증된 포맷.',
+   prep:'당일 밤 실시간 대응.'},
+  {s:'2027-04-05', e:'2027-04-11', cat:'fair', title:'Watches & Wonders Geneva 2027', place:'제네바',
+   angle:'주얼리 워치·하이주얼리 하우스(까르띠에·피아제) 신작 무대.',
+   prep:'—'},
+  {s:'2027-04-10', e:'2027-06-13', cat:'gift', title:'봄 웨딩 시즌 — 브라이덜 피크', place:'한국',
+   angle:'예물 성수기 — 브라이덜 상담·컨시어지 캠페인.',
+   prep:'2~3월 상담 예약 캠페인 선행.'},
+  {s:'2027-05-03', e:'2027-05-03', cat:'redcarpet', title:'Met Gala 2027', place:'뉴욕',
+   angle:'하이주얼리 스테이트먼트 피스의 최대 무대.',
+   prep:'—'},
+  {s:'2027-05-06', e:'2027-05-09', cat:'fair', title:'GemGenève', place:'제네바', approx:true,
+   angle:'원석·빈티지 주얼리 전문 페어 — 젬 딜러·컬렉터 네트워크.',
+   prep:'—'},
+  {s:'2027-05-10', e:'2027-05-17', cat:'auction', title:'제네바 주얼리 경매 위크 (봄)', place:'제네바', approx:true,
+   angle:'상반기 경매 피크 — 컬러 다이아·히스토릭 피스 뉴스.',
+   prep:'—'},
+  {s:'2027-05-11', e:'2027-05-22', cat:'redcarpet', title:'칸 영화제 — 쇼파드의 무대', place:'칸', approx:true,
+   angle:'레드카펫 하이주얼리의 정점 — K-셀럽 착장 모먼트.',
+   prep:'—'},
+  {s:'2027-06-04', e:'2027-06-07', cat:'fair', title:'JCK 라스베가스', place:'라스베가스', approx:true,
+   angle:'북미 최대 주얼리 트레이드쇼.',
+   prep:'—'},
+  {s:'2027-07-05', e:'2027-07-08', cat:'maison', title:'파리 오트쿠튀르 위크 — 하이주얼리 신작', place:'파리', approx:true,
+   angle:'하반기 신작 컬렉션 공개 — 연중 두 번째 대형 신작 모먼트.',
+   prep:'—'},
+  {s:'2027-09-13', e:'2027-09-19', cat:'fair', title:'JGW 홍콩', place:'홍콩', approx:true,
+   angle:'세계 최대 주얼리 B2B 페어.',
+   prep:'—'},
+  {s:'2027-09-14', e:'2027-09-16', cat:'gift', title:'추석 기프팅', place:'한국',
+   angle:'명절 골드·파인주얼리 수요.',
+   prep:'—'},
+  {s:'2027-10-01', e:'2027-11-14', cat:'gift', title:'가을 웨딩 시즌', place:'한국',
+   angle:'브라이덜 피크.',
+   prep:'—'},
+  {s:'2027-11-08', e:'2027-11-14', cat:'auction', title:'제네바 주얼리 경매 위크 (가을)', place:'제네바', approx:true,
+   angle:'연말 경매 피크.',
+   prep:'—'},
+  {s:'2027-12-01', e:'2027-12-25', cat:'gift', title:'홀리데이 기프팅 피크', place:'글로벌',
+   angle:'연중 최대 기프팅 시즌.',
+   prep:'11월 중순 캠페인 론칭.'},
+];
+
+const MONTH_THEMES = {
+  '2026-07':{theme:'하반기 준비', note:'가을 브라이덜·홀리데이 캠페인 기획 시점.'},
+  '2026-08':{theme:'JGW·가을 시즌 D-30'},
+  '2026-09':{theme:'JGW 홍콩 & 추석', super:true},
+  '2026-10':{theme:'브라이덜 & 경매 시즌 개막'},
+  '2026-11':{theme:'제네바 경매 & 홀리데이 론칭', super:true},
+  '2026-12':{theme:'기프팅 피크', super:true},
+  '2027-01':{theme:'쿠튀르 신작 모먼트', super:true},
+  '2027-02':{theme:'춘절 & 밸런타인 기프팅'},
+  '2027-03':{theme:'TEFAF & 레드카펫'},
+  '2027-04':{theme:'W&W 제네바 & 봄 브라이덜', super:true},
+  '2027-05':{theme:'멧갈라 → 칸 → 경매 — 하이시즌', super:true},
+  '2027-06':{theme:'JCK & 웨딩 시즌'},
+  '2027-07':{theme:'쿠튀르 신작 (하반기)', super:true},
+  '2027-08':{theme:'하반기 준비'},
+  '2027-09':{theme:'JGW & 추석'},
+  '2027-10':{theme:'브라이덜 시즌'},
+  '2027-11':{theme:'경매 & 홀리데이 론칭', super:true},
+  '2027-12':{theme:'기프팅 피크', super:true},
+};
+
+const $=s=>document.querySelector(s);
+const fmt=(d)=>`${d.getMonth()+1}/${d.getDate()}`;
+const parse=s=>{const[a,b,c]=s.split('-').map(Number);return new Date(a,b-1,c);};
+const today=new Date(); today.setHours(0,0,0,0);
+const DAY=86400000;
+const MONTH_NAMES=['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+/* 롤링 윈도우: 이번 달 1일 ~ 내년 12월 31일 */
+const winStart=new Date(today.getFullYear(), today.getMonth(), 1);
+const winEnd=new Date(today.getFullYear()+1, 11, 31);
+const winStartKey=`${winStart.getFullYear()}-${String(winStart.getMonth()+1).padStart(2,'0')}`;
+const visible=EVENTS.filter(ev=>parse(ev.e)>=winStart && parse(ev.s)<=winEnd);
+
+const dateLabel=`${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}.${String(today.getDate()).padStart(2,'0')}`;
+$('#today-label').textContent = `${dateLabel} 기준`;
+$('#foot-date').textContent = dateLabel;
+
+function status(ev){
+  const s=parse(ev.s), e=parse(ev.e);
+  if(today>e) return {k:'past'};
+  if(today>=s) return {k:'live', label:'LIVE'};
+  const d=Math.round((s-today)/DAY);
+  return {k:d<=30?'soon':'future', label:`D-${d}`, d};
+}
+
+(function(){
+  const active=visible.map(ev=>({ev,st:status(ev)})).filter(x=>x.st.k==='live'||(x.st.k!=='past'&&x.st.d<=10));
+  const list=$('#now-list');
+  if(active.length===0){
+    $('#now-title').textContent='조용한 주간 — 준비의 시간';
+    $('#now-sub').textContent='이번 주 임박한 대형 이벤트는 없습니다. 아래 레이더의 다가오는 이벤트를 미리 준비하세요.';
+  }else{
+    const live=active.filter(x=>x.st.k==='live').length;
+    $('#now-title').textContent = live>0 ? '지금 진행 중인 모먼트' : '이번 주, 준비할 것들';
+    $('#now-sub').textContent='진행 중이거나 10일 안에 시작되는 이벤트입니다. 캠페인·콘텐츠·준비 체계를 점검하세요.';
+    active.sort((a,b)=>parse(a.ev.s)-parse(b.ev.s)).forEach(({ev,st})=>{
+      const li=document.createElement('li');
+      li.innerHTML=`<span class="d mono">${st.label}</span><span><b>${ev.title}</b> · ${fmt(parse(ev.s))}–${fmt(parse(ev.e))} ${ev.place}</span>`;
+      list.appendChild(li);
+    });
+  }
+})();
+
+(function(){
+  const up=visible.map(ev=>({ev,st:status(ev)})).filter(x=>x.st.k==='soon'||x.st.k==='future')
+    .sort((a,b)=>parse(a.ev.s)-parse(b.ev.s)).slice(0,4);
+  const radar=$('#radar');
+  up.forEach(({ev,st})=>{
+    const c=document.createElement('div'); c.className='radar-card';
+    c.style.setProperty('--cat',CATS[ev.cat].color);
+    c.innerHTML=`<div class="dd mono">${st.label} · ${CATS[ev.cat].label}</div>
+      <div class="t">${ev.title}</div>
+      <div class="m">${fmt(parse(ev.s))}–${fmt(parse(ev.e))} · ${ev.place}</div>`;
+    radar.appendChild(c);
+  });
+})();
+
+(function(){
+  const f=$('#filters');
+  const mk=(key,label,color)=>{
+    const b=document.createElement('button'); b.className='chip'+(key==='all'?' on':''); b.dataset.cat=key;
+    b.innerHTML=(color?`<span class="dot" style="--cc:${color}"></span>`:'')+label;
+    b.addEventListener('click',()=>{
+      f.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x.dataset.cat===key));
+      document.querySelectorAll('.ev').forEach(el=>el.classList.toggle('hidden',key!=='all'&&el.dataset.cat!==key));
+      document.querySelectorAll('.month').forEach(m=>{
+        const any=[...m.querySelectorAll('.ev')].some(el=>!el.classList.contains('hidden'));
+        m.style.display=any?'':'none';
+      });
+    });
+    f.appendChild(b);
+  };
+  mk('all','전체 보기',null);
+  Object.entries(CATS).forEach(([k,v])=>mk(k,v.label,v.color));
+})();
+
+(function(){
+  const byMonth={};
+  visible.forEach(ev=>{
+    let key=ev.s.slice(0,7);
+    if(key<winStartKey) key=winStartKey;
+    (byMonth[key]=byMonth[key]||[]).push(ev);
+  });
+  const root=$('#months');
+  Object.keys(byMonth).sort().forEach(key=>{
+    const [y,m]=key.split('-').map(Number);
+    const meta=(typeof MONTH_THEMES!=='undefined'&&MONTH_THEMES[key])||{theme:''};
+    const sec=document.createElement('section'); sec.className='month';
+    sec.innerHTML=`<div class="month-head">
+        <div class="month-num serif">${String(m).padStart(2,'0')}</div>
+        <div class="month-meta">
+          <div class="y mono">${MONTH_NAMES[m-1]} ${y}</div>
+          <div class="theme">${meta.super?'<span class="super">◆ </span>':''}${meta.theme||''}</div>
+        </div>
+        ${meta.note?`<div class="month-note">${meta.note}</div>`:''}
+      </div>
+      <div class="events"></div>`;
+    const grid=sec.querySelector('.events');
+    byMonth[key].sort((a,b)=>parse(a.s)-parse(b.s)).forEach(ev=>{
+      const st=status(ev);
+      const card=document.createElement('article');
+      card.className='ev'+(st.k==='past'?' past':'');
+      card.dataset.cat=ev.cat;
+      card.style.setProperty('--cat',CATS[ev.cat].color);
+      const dday= st.k==='past' ? `<span class="ev-dday">종료</span>`
+        : st.k==='live' ? `<span class="ev-dday live">● LIVE</span>`
+        : `<span class="ev-dday ${st.k==='soon'?'soon':''} mono">${st.label}</span>`;
+      const sd=parse(ev.s), ed=parse(ev.e);
+      const range = ev.s===ev.e ? fmt(sd) : `${fmt(sd)} – ${fmt(ed)}`;
+      card.innerHTML=`
+        <div class="ev-top"><span class="ev-cat">${CATS[ev.cat].label}</span>${dday}</div>
+        <h3>${ev.title}</h3>
+        <div class="when"><b class="mono">${range}</b> · ${ev.place}${ev.approx?'<span class="approx">± 예상 시기</span>':''}</div>
+        <div class="angles">
+          <div class="angle"><b>MARKETING</b>${ev.angle}</div>
+          ${ev.prep&&ev.prep!=='—'?`<div class="angle prep"><b>PREP</b>${ev.prep}</div>`:''}
+        </div>`;
+      grid.appendChild(card);
+    });
+    root.appendChild(sec);
+  });
+})();
+</script>
+</body>
+</html>
